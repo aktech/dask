@@ -22,7 +22,7 @@ from .utils import (
     validate_axis,
     meta_from_array,
     zeros_like_safe,
-    array_safe,
+    array_safe, asarray_safe,
 )
 from .wrap import ones
 from .ufunc import multiply, sqrt
@@ -1729,7 +1729,7 @@ def tril(m, k=0):
 
 @derived_from(np)
 def triu(m, k=0):
-    m = asarray(m)
+    m = asarray_safe(m, like=m._meta)
     mask = tri(*m.shape[-2:], k=k - 1, dtype=bool, chunks=m.chunks[-2:])
 
     return where(mask, zeros(1, dtype=m.dtype), m)
