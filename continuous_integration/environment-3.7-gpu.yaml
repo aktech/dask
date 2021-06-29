@@ -46,7 +46,8 @@ dependencies:
   - graphviz
   - ipython
   - lz4
-  - numba
+  # cudf-21.06.01-cuda_11.2_py37_g101fc0fda4_2 requires numba >=0.53.1
+  - numba>=0.53.1
   - partd
   - pickle5
   - psutil
