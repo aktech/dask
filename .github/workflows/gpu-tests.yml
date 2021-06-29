@@ -23,6 +23,9 @@ jobs:
         with:
           fetch-depth: 0  # Needed by codecov.io
 
+      - name: Run nvidia-smi
+        run: nvidia-smi
+
       - name: Setup Conda Environment
         uses: conda-incubator/setup-miniconda@v2
         with:
