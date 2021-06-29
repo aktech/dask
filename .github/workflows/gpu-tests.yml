@@ -31,7 +31,7 @@ jobs:
           use-mamba: true
           channel-priority: true
           python-version: ${{ matrix.python-version }}
-          environment-file: continuous_integration/environment-${{ matrix.python-version }}.yaml
+          environment-file: continuous_integration/environment-${{ matrix.python-version }}-gpu.yaml
           activate-environment: test-environment
           auto-activate-base: false
 
