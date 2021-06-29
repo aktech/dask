@@ -63,7 +63,7 @@ dependencies:
   - mmh3
   - pip
   - dask-cudf
-  - cudf
+  - cudf>=21.06.01
   - cupy
   - pip:
     - git+https://github.com/dask/distributed
