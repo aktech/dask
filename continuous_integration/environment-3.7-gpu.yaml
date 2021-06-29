@@ -1,6 +1,7 @@
 # This job includes coverage
 name: test-environment
 channels:
+  - nvidia
   - rapidsai
   - conda-forge
 dependencies:
